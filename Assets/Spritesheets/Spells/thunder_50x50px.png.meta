@@ -1,0 +1,1123 @@
+fileFormatVersion: 2
+guid: 35dac12861c6eef49a02a970adbaaf6f
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 8131047453230641432
+    second: thunder_50x50px_0
+  - first:
+      213: -8943541440763777458
+    second: thunder_50x50px_1
+  - first:
+      213: 5989429618036743419
+    second: thunder_50x50px_2
+  - first:
+      213: -1163606524290704388
+    second: thunder_50x50px_3
+  - first:
+      213: -5629697307564876767
+    second: thunder_50x50px_4
+  - first:
+      213: -7686034381023368076
+    second: thunder_50x50px_5
+  - first:
+      213: -5295165285656414037
+    second: thunder_50x50px_6
+  - first:
+      213: 7865054243622247177
+    second: thunder_50x50px_7
+  - first:
+      213: 8480015366361664773
+    second: thunder_50x50px_8
+  - first:
+      213: -2678954418612512055
+    second: thunder_50x50px_9
+  - first:
+      213: -5095159204629527276
+    second: thunder_50x50px_10
+  - first:
+      213: -2715743845419241141
+    second: thunder_50x50px_11
+  - first:
+      213: 6960472749990435802
+    second: thunder_50x50px_12
+  - first:
+      213: -5069288040599497512
+    second: thunder_50x50px_13
+  - first:
+      213: -4173751571531601636
+    second: thunder_50x50px_14
+  - first:
+      213: 2423185123064254737
+    second: thunder_50x50px_15
+  - first:
+      213: -4194529778159045934
+    second: thunder_50x50px_16
+  - first:
+      213: 317381561810030239
+    second: thunder_50x50px_17
+  - first:
+      213: -6513668611737522317
+    second: thunder_50x50px_18
+  - first:
+      213: -1802158343566408772
+    second: thunder_50x50px_19
+  - first:
+      213: -5264174151845070558
+    second: thunder_50x50px_20
+  - first:
+      213: 2563777701662378446
+    second: thunder_50x50px_21
+  - first:
+      213: 7567640148186842072
+    second: thunder_50x50px_22
+  - first:
+      213: -8340943874165868111
+    second: thunder_50x50px_23
+  - first:
+      213: 1248181418690718952
+    second: thunder_50x50px_24
+  - first:
+      213: -5011457851656657026
+    second: thunder_50x50px_25
+  - first:
+      213: 5519796951825032885
+    second: thunder_50x50px_26
+  - first:
+      213: 5782280328059222874
+    second: thunder_50x50px_27
+  - first:
+      213: -2230400724253726693
+    second: thunder_50x50px_28
+  - first:
+      213: -4184327585914051081
+    second: thunder_50x50px_29
+  - first:
+      213: -3331531911166171519
+    second: thunder_50x50px_30
+  - first:
+      213: 6809361663992754745
+    second: thunder_50x50px_31
+  - first:
+      213: 1845032278690793891
+    second: thunder_50x50px_32
+  - first:
+      213: 8682508544185391375
+    second: thunder_50x50px_33
+  - first:
+      213: 4516322642490452816
+    second: thunder_50x50px_34
+  - first:
+      213: -3069308918200963838
+    second: thunder_50x50px_35
+  - first:
+      213: -6798819719400000937
+    second: thunder_50x50px_36
+  - first:
+      213: -4074594088867776380
+    second: thunder_50x50px_37
+  - first:
+      213: 1725970195290590061
+    second: thunder_50x50px_38
+  - first:
+      213: -657586832685601721
+    second: thunder_50x50px_39
+  - first:
+      213: -4640233911472987090
+    second: thunder_50x50px_40
+  - first:
+      213: -4780861208250974305
+    second: thunder_50x50px_41
+  externalObjects: {}
+  serializedVersion: 10
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 32
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: thunder_50x50px_0
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 239
+        width: 11
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 81138ad149847d070800000000000000
+      internalID: 8131047453230641432
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: thunder_50x50px_1
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 236
+        width: 21
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4e2a4dc17822e380800000000000000
+      internalID: -8943541440763777458
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: thunder_50x50px_2
+      rect:
+        serializedVersion: 2
+        x: 117
+        y: 229
+        width: 21
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bfc9846118abe1350800000000000000
+      internalID: 5989429618036743419
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: thunder_50x50px_3
+      rect:
+        serializedVersion: 2
+        x: 167
+        y: 225
+        width: 20
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cfb535df70a0adfe0800000000000000
+      internalID: -1163606524290704388
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: thunder_50x50px_4
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 213
+        width: 24
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 12c5f9d402c4fd1b0800000000000000
+      internalID: -5629697307564876767
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: thunder_50x50px_5
+      rect:
+        serializedVersion: 2
+        x: 262
+        y: 206
+        width: 28
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47ca9abe378b55590800000000000000
+      internalID: -7686034381023368076
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: thunder_50x50px_6
+      rect:
+        serializedVersion: 2
+        x: 312
+        y: 200
+        width: 27
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba838794a3bc386b0800000000000000
+      internalID: -5295165285656414037
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: thunder_50x50px_7
+      rect:
+        serializedVersion: 2
+        x: 361
+        y: 200
+        width: 30
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 90b584ae929462d60800000000000000
+      internalID: 7865054243622247177
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: thunder_50x50px_8
+      rect:
+        serializedVersion: 2
+        x: 412
+        y: 147
+        width: 31
+        height: 103
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 50d47d1fb011fa570800000000000000
+      internalID: 8480015366361664773
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: thunder_50x50px_9
+      rect:
+        serializedVersion: 2
+        x: 463
+        y: 200
+        width: 30
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ca5325662172dad0800000000000000
+      internalID: -2678954418612512055
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: thunder_50x50px_10
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 100
+        width: 32
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 415cefdd2bb5a49b0800000000000000
+      internalID: -5095159204629527276
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: thunder_50x50px_11
+      rect:
+        serializedVersion: 2
+        x: 61
+        y: 82
+        width: 30
+        height: 118
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b4135d87c5dbf4ad0800000000000000
+      internalID: -2715743845419241141
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: thunder_50x50px_12
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 82
+        width: 31
+        height: 118
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: adb57f38611989060800000000000000
+      internalID: 6960472749990435802
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: thunder_50x50px_13
+      rect:
+        serializedVersion: 2
+        x: 164
+        y: 150
+        width: 26
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d45ee3a26546a9b0800000000000000
+      internalID: -5069288040599497512
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: thunder_50x50px_14
+      rect:
+        serializedVersion: 2
+        x: 214
+        y: 150
+        width: 26
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c1961262f0bd316c0800000000000000
+      internalID: -4173751571531601636
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: thunder_50x50px_15
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 129
+        width: 27
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1119145e702e0a120800000000000000
+      internalID: 2423185123064254737
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: thunder_50x50px_16
+      rect:
+        serializedVersion: 2
+        x: 314
+        y: 150
+        width: 28
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d2380de3690ac5c0800000000000000
+      internalID: -4194529778159045934
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: thunder_50x50px_17
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 143
+        width: 9
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f9e02f159d0976400800000000000000
+      internalID: 317381561810030239
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: thunder_50x50px_18
+      rect:
+        serializedVersion: 2
+        x: 364
+        y: 136
+        width: 25
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 37fe5c498ecca95a0800000000000000
+      internalID: -6513668611737522317
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: thunder_50x50px_19
+      rect:
+        serializedVersion: 2
+        x: 463
+        y: 147
+        width: 26
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb3c7b6e8827df6e0800000000000000
+      internalID: -1802158343566408772
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: thunder_50x50px_20
+      rect:
+        serializedVersion: 2
+        x: 161
+        y: 100
+        width: 28
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2293b7bef75e1f6b0800000000000000
+      internalID: -5264174151845070558
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: thunder_50x50px_21
+      rect:
+        serializedVersion: 2
+        x: 166
+        y: 128
+        width: 26
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec947a67c3e549320800000000000000
+      internalID: 2563777701662378446
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: thunder_50x50px_22
+      rect:
+        serializedVersion: 2
+        x: 209
+        y: 100
+        width: 30
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d349a4ae98a50960800000000000000
+      internalID: 7567640148186842072
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: thunder_50x50px_23
+      rect:
+        serializedVersion: 2
+        x: 218
+        y: 132
+        width: 21
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b97fd81db30f3c80800000000000000
+      internalID: -8340943874165868111
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: thunder_50x50px_24
+      rect:
+        serializedVersion: 2
+        x: 269
+        y: 100
+        width: 20
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ecad4c136e625110800000000000000
+      internalID: 1248181418690718952
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: thunder_50x50px_25
+      rect:
+        serializedVersion: 2
+        x: 269
+        y: 123
+        width: 8
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e77a921c2a9b37ab0800000000000000
+      internalID: -5011457851656657026
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: thunder_50x50px_26
+      rect:
+        serializedVersion: 2
+        x: 308
+        y: 107
+        width: 11
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b6a0d125124a9c40800000000000000
+      internalID: 5519796951825032885
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: thunder_50x50px_27
+      rect:
+        serializedVersion: 2
+        x: 317
+        y: 100
+        width: 23
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5bf2b19259ce3050800000000000000
+      internalID: 5782280328059222874
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: thunder_50x50px_28
+      rect:
+        serializedVersion: 2
+        x: 319
+        y: 127
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b182514cb560c01e0800000000000000
+      internalID: -2230400724253726693
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: thunder_50x50px_29
+      rect:
+        serializedVersion: 2
+        x: 358
+        y: 107
+        width: 10
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f5a9b9ea384ee5c0800000000000000
+      internalID: -4184327585914051081
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: thunder_50x50px_30
+      rect:
+        serializedVersion: 2
+        x: 369
+        y: 117
+        width: 8
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 186ef05c06504c1d0800000000000000
+      internalID: -3331531911166171519
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: thunder_50x50px_31
+      rect:
+        serializedVersion: 2
+        x: 372
+        y: 100
+        width: 18
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 93273791b56bf7e50800000000000000
+      internalID: 6809361663992754745
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: thunder_50x50px_32
+      rect:
+        serializedVersion: 2
+        x: 379
+        y: 134
+        width: 9
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a98e72051fda9910800000000000000
+      internalID: 1845032278690793891
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: thunder_50x50px_33
+      rect:
+        serializedVersion: 2
+        x: 406
+        y: 107
+        width: 11
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f09d67fd4877e7870800000000000000
+      internalID: 8682508544185391375
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: thunder_50x50px_34
+      rect:
+        serializedVersion: 2
+        x: 418
+        y: 114
+        width: 21
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05b62bcc3833dae30800000000000000
+      internalID: 4516322642490452816
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: thunder_50x50px_35
+      rect:
+        serializedVersion: 2
+        x: 456
+        y: 100
+        width: 34
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 20d61b00dcf9765d0800000000000000
+      internalID: -3069308918200963838
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: thunder_50x50px_36
+      rect:
+        serializedVersion: 2
+        x: 486
+        y: 110
+        width: 5
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 752fd35ac7db5a1a0800000000000000
+      internalID: -6798819719400000937
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: thunder_50x50px_37
+      rect:
+        serializedVersion: 2
+        x: 259
+        y: 106
+        width: 11
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4883129a3422477c0800000000000000
+      internalID: -4074594088867776380
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: thunder_50x50px_38
+      rect:
+        serializedVersion: 2
+        x: 423
+        y: 100
+        width: 12
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6b053f7fb0e3f710800000000000000
+      internalID: 1725970195290590061
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: thunder_50x50px_39
+      rect:
+        serializedVersion: 2
+        x: 436
+        y: 109
+        width: 4
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74ceccc7248cfd6f0800000000000000
+      internalID: -657586832685601721
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: thunder_50x50px_40
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 500
+        height: 79
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e246eefa7d39a9fb0800000000000000
+      internalID: -4640233911472987090
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: thunder_50x50px_41
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 60
+        width: 4
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f9f71c9af08f6adb0800000000000000
+      internalID: -4780861208250974305
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
