@@ -8,6 +8,7 @@ public class Spawner : MonoBehaviour
     public GameObject SpawnObject;
     public float SpawnTime;
     public int SpawnAmount;
+    public float SpawnRadius;
 
     private float LastSpawn;
 
@@ -22,5 +23,15 @@ public class Spawner : MonoBehaviour
                 SpawnAmount--;
             }
         }
+    }
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.DrawWireSphere(transform.position, SpawnRadius);
+    }
+
+    private Vector3 GetRandomSpawnPoint(Vector3 center) {
+        Vector3 spawnPoint = Quaternion.AngleAxis(Random.Range(0.0f,180.0f), Vector3.up) * Vector3.forward;
+        return center + spawnPoint;
     }
 }

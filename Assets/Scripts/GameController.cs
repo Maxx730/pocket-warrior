@@ -18,8 +18,7 @@ public class GameController : MonoBehaviour
 
     private void Start()
     {
-        Hero = GameObject.Find("Hero");
-        MovementTarget = GameObject.Find("MovementTarget");
+
     }
 
     private void Update()
@@ -27,14 +26,5 @@ public class GameController : MonoBehaviour
         Cursor.visible = false;
         Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         GameCursor.transform.position = new Vector3(mousePos.x, mousePos.y, 0);
-
-        if(Input.GetMouseButtonDown(0))
-        {
-            MovementTarget.SetActive(true);
-            MovementTarget.transform.position = new Vector3(mousePos.x, mousePos.y, MovementTarget.transform.position.z);
-            Hero.GetComponent<AIDestinationSetter>().target = MovementTarget.transform;
-            Hero.GetComponent<AIPath>().canMove = true;
-            Hero.GetComponent<Hero>().IsMoving = true;
-        }
     }
 }

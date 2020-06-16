@@ -18,6 +18,7 @@ GameObject:
   - component: {fileID: 8314019910324986879}
   - component: {fileID: 8314019910324986877}
   - component: {fileID: 8314019910324986848}
+  - component: {fileID: 1516524136750490408}
   m_Layer: 0
   m_Name: Slime
   m_TagString: Enemy
@@ -122,11 +123,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MovementSpeed: 0.25
-  Target: {fileID: 0}
-  ShowDebug: 0
-  StoppingDistance: 1
-  FlashTime: 0.2
-  MaxHealth: 50
+  AttackFrequency: 0.5
+  AgroDistance: 3
 --- !u!61 &8314019910324986850
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -136,7 +134,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 8314019910324986855}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 1ed8c6f356cc35ca6a422aa743e72199, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -163,8 +161,8 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: acdc60c7304edd04b9e3b452f771782c, type: 3}
-  m_PlayOnAwake: 0
+  m_audioClip: {fileID: 8300000, guid: 70cf36f86fde2f409b0410c052cac7c1, type: 3}
+  m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -348,3 +346,19 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!58 &1516524136750490408
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8314019910324986855}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 1.5

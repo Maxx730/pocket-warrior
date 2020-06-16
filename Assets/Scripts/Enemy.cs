@@ -2,89 +2,97 @@
 using System.Numerics;
 using System.Runtime.InteropServices.ComTypes;
 using UnityEngine;
+using Pathfinding;
 
 public class Enemy : MonoBehaviour
 {
     [Header("General")]
     public float MovementSpeed;
-    public GameObject Target;
-    public bool ShowDebug;
-    public float StoppingDistance;
-    public float FlashTime;
-    public int MaxHealth;
+    public float AttackFrequency;
+    public float AgroDistance;
 
     private Animator EnemyAnim;
     private SpriteRenderer Render;
     private AudioSource Aud;
-    private bool IsMoving = false, MovingRight = false, MovingUp = false;
-    private float LastFlash;
+    private AIDestinationSetter AiDest;
+    private AIPath AIPath;
+    private GameObject Goal;
+    private Rigidbody2D RBody;
+
+    private bool agro = false;
+    private float lastAttack;
+    private float lastExplosion;
+
     private void Start()
     {
         EnemyAnim = GetComponent<Animator>();
         Render = GetComponent<SpriteRenderer>();
         Aud = GetComponent<AudioSource>();
+        AiDest = GetComponent<AIDestinationSetter>();
+        AIPath = GetComponent<AIPath>();
+        RBody = GetComponent<Rigidbody2D>();
+        Goal = GameObject.Find("EnemyGoal");
+
+        AiDest.target = Goal.transform;
     }
     private void Update()
     {
+        //Make sure we are in agro mode and we are only attacking once second.
+        if(agro && Time.time - lastAttack > 1f) {
+            AttackGoal();
+        }
 
+        if(CheckDistanceFromGoal() && Time.time - lastExplosion > 1f) {
+            AIPath.canMove = true;
+            AiDest.target = Goal.transform;
+            agro = false;
+        }
+    }
+
+    //If the slime is somehow too far away from the goal, reactivate path finding and move back towards the goal.
+    private bool CheckDistanceFromGoal() {
+        float distance = UnityEngine.Vector2.Distance(transform.position, Goal.transform.position);
+        if(distance > 3) {
+            return true;
+        }
+        return false;
+    }
+
+    private void AttackGoal() {
+        UnityEngine.Vector2 direction = Goal.transform.position - transform.position;
+        RBody.AddForce(direction * 100f);
+        lastAttack = Time.time;
+        Aud.Play();
+    }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        switch(other.gameObject.tag) {
+            case "Explosion":
+
+            default:
+                break;
+        }
+
+        if(other.gameObject.name == "EnemyGoal") {
+            //Since we are now close enough to the goal, we can now start to attack the goal.
+            agro = true;
+            AiDest.target = null;
+            AIPath.canMove = false;
+        }
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if(collision.gameObject.name == "Hero")
-        {
-            DamageHero(collision.gameObject);
+        if(collision.gameObject.name == "EnemyGoal") {
+            Goal.GetComponent<Goal>().TakeDamage(5);
         }
     }
-
-    private void DamageHero(GameObject hero)
-    {
-        UnityEngine.Vector2 direction = hero.transform.position - transform.position;
-        Debug.DrawLine(transform.position, direction, Color.red);
-        gameObject.GetComponent<Rigidbody2D>().AddForce(direction * 1000f);
-    }
-
-    private void OnDrawGizmos()
-    {
-        if(ShowDebug && Target)
-        {
-            Gizmos.DrawWireSphere(transform.position, StoppingDistance);
-        }
-    }
-
-    private bool CheckStoppingDistance()
-    {
-        if(UnityEngine.Vector2.Distance(transform.position, Target.transform.position) <= StoppingDistance)
-        {
-            return true;
-        } else
-        {
-            return false;
-        }
-    }
-
-    private void CheckDamageHit()
-    {
-        UnityEngine.Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        if(UnityEngine.Vector3.Distance(new UnityEngine.Vector3(mousePos.x, mousePos.y, transform.position.z), transform.position) < StoppingDistance)
-        {
-            if(Aud)
-            {
-                Aud.Play();
-            }
-            LastFlash = Time.time;
-            DamageEnemy();
-        }
-    }
-
-    private void DamageEnemy()
-    {
-        if(MaxHealth - 10 <= 0)
-        {
-            Destroy(transform.gameObject);
-        } else
-        {
-            MaxHealth -= 10;
-        }
+    public void ApplyExplosiveReaction(GameObject explosion) {
+        AiDest.target = null;
+        AIPath.canMove = false;
+        lastExplosion = Time.time;
+        UnityEngine.Vector2 direction = explosion.transform.position - transform.position;
+        RBody.AddForce(-direction * 100f);
     }
 }
