@@ -6,19 +6,17 @@ using UnityEngine.UI;
 public class Goal : MonoBehaviour
 {
     [Header("General")]
-    public int Hitpoints;
     public GameObject Loss;
     public float CoinOffset;
 
     private float lastDamage;
     private SpriteRenderer renderer;
-    private Text goldText;
+    private GameController controller;
 
     private void Start()
     {
         renderer = transform.GetChild(0).GetComponent<SpriteRenderer>();
-        goldText = GameObject.Find("PlayerGold").GetComponent<Text>();
-        goldText.text = IntToSixString(Hitpoints);
+        controller = GameObject.Find("GameController").GetComponent<GameController>();
     }
 
     private void Update()
@@ -32,17 +30,7 @@ public class Goal : MonoBehaviour
 
     public void TakeDamage(int amount) {
         lastDamage = Time.time;
-        Hitpoints -= amount;
-        goldText.text = IntToSixString(Hitpoints);
+        controller.RemoveGold(5);
         Instantiate(Loss, new Vector3(transform.position.x, transform.position.y + CoinOffset, transform.position.z), Quaternion.identity);
-    }
-
-    public string IntToSixString(int amount) {
-        int length = amount.ToString().Length;
-        string finalString = "";
-        for(int i = 0;i < 6 - amount.ToString().Length;i++) {
-            finalString += "0";
-        }
-        return finalString + amount.ToString();
     }
 }

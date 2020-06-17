@@ -21,7 +21,7 @@ public class Enemy : MonoBehaviour
 
     private bool agro = false;
     private float lastAttack;
-    private float lastExplosion;
+    public float lastExplosion;
 
     private void Start()
     {
@@ -60,7 +60,7 @@ public class Enemy : MonoBehaviour
 
     private void AttackGoal() {
         UnityEngine.Vector2 direction = Goal.transform.position - transform.position;
-        RBody.AddForce(direction * 100f);
+        RBody.AddForce(direction * 1000f);
         lastAttack = Time.time;
         Aud.Play();
     }
@@ -88,11 +88,8 @@ public class Enemy : MonoBehaviour
             Goal.GetComponent<Goal>().TakeDamage(5);
         }
     }
-    public void ApplyExplosiveReaction(GameObject explosion) {
+    public void TurnOffAi() {
         AiDest.target = null;
         AIPath.canMove = false;
-        lastExplosion = Time.time;
-        UnityEngine.Vector2 direction = explosion.transform.position - transform.position;
-        RBody.AddForce(-direction * 100f);
     }
 }

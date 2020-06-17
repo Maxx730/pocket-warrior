@@ -13,6 +13,7 @@ public class Explosion : MonoBehaviour
     {
         CircCollide = GetComponent<CircleCollider2D>();
         CircCollide.radius = ExplosionRadius;
+        Destroy(transform.gameObject, .25f);
     }
     private void OnDrawGizmos()
     {
@@ -22,14 +23,21 @@ public class Explosion : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other)
     {
         if(other.gameObject.tag == "Enemy") {
-            other.gameObject.GetComponent<Enemy>().ApplyExplosiveReaction(transform.gameObject);
+
         }
     }
 
     private void OnTriggerStay2D(Collider2D other)
     {
         if(other.gameObject.tag == "Enemy") {
-            other.gameObject.GetComponent<Enemy>().ApplyExplosiveReaction(transform.gameObject);
+             ApplyExplosiveReaction(other.gameObject);
         }
+    }
+
+    private void ApplyExplosiveReaction(GameObject target) {
+        target.GetComponent<Enemy>().TurnOffAi();
+        target.GetComponent<Enemy>().lastExplosion = Time.time;
+        UnityEngine.Vector2 direction = transform.position - target.transform.position;
+        target.GetComponent<Rigidbody2D>().AddForce(-direction * 50f);
     }
 }

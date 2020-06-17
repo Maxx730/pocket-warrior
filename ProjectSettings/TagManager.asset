@@ -7,6 +7,7 @@ TagManager:
   - Enemy
   - RoomPointer
   - Explosion
+  - Valuable
   layers:
   - Default
   - TransparentFX
