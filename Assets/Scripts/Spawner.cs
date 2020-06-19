@@ -5,7 +5,7 @@ using UnityEngine;
 public class Spawner : MonoBehaviour
 {
     [Header("General")]
-    public GameObject SpawnObject;
+    public List<GameObject> SpawnObjects;
     public float SpawnTime;
     public int SpawnAmount;
     public float SpawnRadius;
@@ -16,9 +16,9 @@ public class Spawner : MonoBehaviour
     {
         if(Time.time - LastSpawn > SpawnTime && SpawnAmount > 0)
         {
-            if(SpawnObject)
+            if(SpawnObjects.Count > 0)
             {
-                Instantiate(SpawnObject, transform.position, Quaternion.identity);
+                Instantiate(SpawnObjects[Random.Range(-1,SpawnObjects.Count)], transform.position, Quaternion.identity);
                 LastSpawn = Time.time;
                 SpawnAmount--;
             }

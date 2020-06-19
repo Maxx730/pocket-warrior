@@ -8,6 +8,8 @@ TagManager:
   - RoomPointer
   - Explosion
   - Valuable
+  - Wall
+  - Projectile
   layers:
   - Default
   - TransparentFX

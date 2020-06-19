@@ -10,6 +10,8 @@ public class Enemy : MonoBehaviour
     public float MovementSpeed;
     public float AttackFrequency;
     public float AgroDistance;
+    public int EnemyHitpoints;
+    public GameObject[] Rewards;
 
     private Animator EnemyAnim;
     private SpriteRenderer Render;
@@ -21,6 +23,7 @@ public class Enemy : MonoBehaviour
 
     private bool agro = false;
     private float lastAttack;
+    private float lastDamage;
     public float lastExplosion;
 
     private void Start()
@@ -47,13 +50,22 @@ public class Enemy : MonoBehaviour
             AiDest.target = Goal.transform;
             agro = false;
         }
+
+        if(Time.time - lastDamage < .15f) {
+            Render.color = Color.red;
+        } else {
+            Render.color = Color.white;
+        }
     }
 
     //If the slime is somehow too far away from the goal, reactivate path finding and move back towards the goal.
     private bool CheckDistanceFromGoal() {
-        float distance = UnityEngine.Vector2.Distance(transform.position, Goal.transform.position);
-        if(distance > 3) {
-            return true;
+        if(Goal) {
+            float distance = UnityEngine.Vector2.Distance(transform.position, Goal.transform.position);
+            if(distance > 3) {
+                return true;
+            }
+            return false;
         }
         return false;
     }
@@ -91,5 +103,20 @@ public class Enemy : MonoBehaviour
     public void TurnOffAi() {
         AiDest.target = null;
         AIPath.canMove = false;
+    }
+
+    public void TakeDamage(int value) {
+        lastDamage = Time.time;
+
+        if(EnemyHitpoints - value <= 0) {
+            if(Rewards.Length > 0) {
+                for(int i = 0;i < Rewards.Length;i++) {
+                    Instantiate(Rewards[i], transform.position, UnityEngine.Quaternion.identity);
+                }
+            }
+            Destroy(transform.gameObject);
+        } else {
+            EnemyHitpoints -= value;
+        }
     }
 }

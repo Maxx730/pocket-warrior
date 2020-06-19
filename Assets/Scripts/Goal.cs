@@ -31,6 +31,5 @@ public class Goal : MonoBehaviour
     public void TakeDamage(int amount) {
         lastDamage = Time.time;
         controller.RemoveGold(5);
-        Instantiate(Loss, new Vector3(transform.position.x, transform.position.y + CoinOffset, transform.position.z), Quaternion.identity);
     }
 }

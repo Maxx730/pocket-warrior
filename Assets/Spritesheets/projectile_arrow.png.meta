@@ -1,9 +1,84 @@
 fileFormatVersion: 2
 guid: 7a1e42fab535b25498d8d45441d9c9ea
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: 7862752841807127601
+    second: projectile_arrow_0
+  - first:
+      213: 6922497831860979397
+    second: projectile_arrow_1
+  - first:
+      213: -671355820219542384
+    second: projectile_arrow_2
+  - first:
+      213: 4505229764880830081
+    second: projectile_arrow_3
+  - first:
+      213: -949318316513493658
+    second: projectile_arrow_4
+  - first:
+      213: 1734278911278345207
+    second: projectile_arrow_5
+  - first:
+      213: 2693146339749717985
+    second: projectile_arrow_6
+  - first:
+      213: -7649174717531730060
+    second: projectile_arrow_7
+  - first:
+      213: -5931444841317563598
+    second: projectile_arrow_8
+  - first:
+      213: 8809124410855648488
+    second: projectile_arrow_9
+  - first:
+      213: -5249993705128589615
+    second: projectile_arrow_10
+  - first:
+      213: -9198760083807919541
+    second: projectile_arrow_11
+  - first:
+      213: 1212279977270228274
+    second: projectile_arrow_12
+  - first:
+      213: -8376628948439848425
+    second: projectile_arrow_13
+  - first:
+      213: -1328840142291767334
+    second: projectile_arrow_14
+  - first:
+      213: -940425133242172697
+    second: projectile_arrow_15
+  - first:
+      213: -1486844406960357059
+    second: projectile_arrow_16
+  - first:
+      213: 5326455542683849093
+    second: projectile_arrow_17
+  - first:
+      213: 1599843812162885034
+    second: projectile_arrow_18
+  - first:
+      213: 3994553997441299162
+    second: projectile_arrow_19
+  - first:
+      213: -7295861836841859891
+    second: projectile_arrow_20
+  - first:
+      213: -7592689802999983681
+    second: projectile_arrow_21
+  - first:
+      213: 5620861064095903969
+    second: projectile_arrow_22
+  - first:
+      213: -4688728411065923348
+    second: projectile_arrow_23
+  - first:
+      213: -8242960796774942590
+    second: projectile_arrow_24
   externalObjects: {}
-  serializedVersion: 10
+  serializedVersion: 11
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -45,7 +120,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 16
+  spritePixelsToUnits: 32
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -57,6 +132,7 @@ TextureImporter:
   maxTextureSizeSet: 0
   compressionQualitySet: 0
   textureFormatSet: 0
+  applyGammaDecoding: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -96,7 +172,532 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: projectile_arrow_0
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 143
+        width: 5
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1346b9c0d0c1e1d60800000000000000
+      internalID: 7862752841807127601
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: projectile_arrow_1
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 144
+        width: 5
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c64c72e917a11060800000000000000
+      internalID: 6922497831860979397
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: projectile_arrow_2
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 145
+        width: 5
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0945ce1407ddea6f0800000000000000
+      internalID: -671355820219542384
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: projectile_arrow_3
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 146
+        width: 5
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18e0d37f99ac58e30800000000000000
+      internalID: 4505229764880830081
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: projectile_arrow_4
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 147
+        width: 5
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 66df075550853d2f0800000000000000
+      internalID: -949318316513493658
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: projectile_arrow_5
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 111
+        width: 9
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7fb62303b75611810800000000000000
+      internalID: 1734278911278345207
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: projectile_arrow_6
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 111
+        width: 10
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e7ececb35aff5520800000000000000
+      internalID: 2693146339749717985
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: projectile_arrow_7
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 112
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47f4f981f1ca8d590800000000000000
+      internalID: -7649174717531730060
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: projectile_arrow_8
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 114
+        width: 14
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 233817cc7564fada0800000000000000
+      internalID: -5931444841317563598
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: projectile_arrow_9
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 117
+        width: 13
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ece54b9afb404a70800000000000000
+      internalID: 8809124410855648488
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: projectile_arrow_10
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 80
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d606c47a864427b0800000000000000
+      internalID: -5249993705128589615
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: projectile_arrow_11
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 82
+        width: 15
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b42269ed070775080800000000000000
+      internalID: -9198760083807919541
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: projectile_arrow_12
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 85
+        width: 16
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 235b2856732e2d010800000000000000
+      internalID: 1212279977270228274
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: projectile_arrow_13
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 84
+        width: 15
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 71a2df84a5c30cb80800000000000000
+      internalID: -8376628948439848425
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: projectile_arrow_14
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 82
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: adf6b6b5ee20f8de0800000000000000
+      internalID: -1328840142291767334
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: projectile_arrow_15
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 52
+        width: 13
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ea304be250f2f2f0800000000000000
+      internalID: -940425133242172697
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: projectile_arrow_16
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 51
+        width: 14
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d310ad6b3eaad5be0800000000000000
+      internalID: -1486844406960357059
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: projectile_arrow_17
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 49
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 581d495681f5be940800000000000000
+      internalID: 5326455542683849093
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: projectile_arrow_18
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 48
+        width: 10
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa553188879c33610800000000000000
+      internalID: 1599843812162885034
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: projectile_arrow_19
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 48
+        width: 9
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad2fa9552b18f6730800000000000000
+      internalID: 3994553997441299162
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: projectile_arrow_20
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 19
+        width: 5
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc446b48054efba90800000000000000
+      internalID: -7295861836841859891
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: projectile_arrow_21
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 18
+        width: 5
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb1947a1ad851a690800000000000000
+      internalID: -7592689802999983681
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: projectile_arrow_22
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 17
+        width: 5
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e0b2417b5f410e40800000000000000
+      internalID: 5620861064095903969
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: projectile_arrow_23
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 16
+        width: 5
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce842222a5a4eeeb0800000000000000
+      internalID: -4688728411065923348
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: projectile_arrow_24
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 15
+        width: 5
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 28832c214de1b9d80800000000000000
+      internalID: -8242960796774942590
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []

@@ -5,6 +5,8 @@ using UnityEngine;
 public class Valuable : MonoBehaviour
 {
     public bool IsCollected = false;
+    public int value;
+    
     private Rigidbody2D rigidbody;
     private Vector3 lerpLocation;
     private void Start()
