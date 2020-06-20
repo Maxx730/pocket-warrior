@@ -37,6 +37,7 @@ public class Arrow : MonoBehaviour
             transform.GetChild(0).gameObject.SetActive(false);
             rigidbody.isKinematic = true;
             collider.isTrigger = true;
+            Destroy(transform.gameObject, 3f);
         }
     }
 }

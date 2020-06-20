@@ -20,6 +20,7 @@ public class Enemy : MonoBehaviour
     private AIPath AIPath;
     private GameObject Goal;
     private Rigidbody2D RBody;
+    private ParticleSystem DamagePart;
 
     private bool agro = false;
     private float lastAttack;
@@ -34,6 +35,7 @@ public class Enemy : MonoBehaviour
         AiDest = GetComponent<AIDestinationSetter>();
         AIPath = GetComponent<AIPath>();
         RBody = GetComponent<Rigidbody2D>();
+        DamagePart = transform.GetChild(0).GetComponent<ParticleSystem>();
         Goal = GameObject.Find("EnemyGoal");
 
         AiDest.target = Goal.transform;
@@ -79,12 +81,6 @@ public class Enemy : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        switch(other.gameObject.tag) {
-            case "Explosion":
-
-            default:
-                break;
-        }
 
         if(other.gameObject.name == "EnemyGoal") {
             //Since we are now close enough to the goal, we can now start to attack the goal.
@@ -117,6 +113,7 @@ public class Enemy : MonoBehaviour
             Destroy(transform.gameObject);
         } else {
             EnemyHitpoints -= value;
+            DamagePart.Play();
         }
     }
 }

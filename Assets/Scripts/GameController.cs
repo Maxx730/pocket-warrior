@@ -1,6 +1,7 @@
 ﻿using Pathfinding;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -20,12 +21,11 @@ public class GameController : MonoBehaviour
     private Text goldText;
     private Sound soundSource;
     private LineRenderer lineRenderer;
-
     private bool TouchDown = false;
-
     private Vector3 FirstPosition;
     private Vector3 SecondPosition;
     private GameObject UiArrow;
+    private Vector3 nextCamPosition;
 
     private void Start()
     {
@@ -35,6 +35,7 @@ public class GameController : MonoBehaviour
         soundSource = GameObject.Find("SoundSource").GetComponent<Sound>();
         lineRenderer = GetComponent<LineRenderer>();
         goldText.text = Util.IntToSixString(goldAmount);
+        nextCamPosition = transform.position;
     }
 
     private void OnDrawGizmos()
@@ -45,7 +46,7 @@ public class GameController : MonoBehaviour
 
     private void Update()
     {
-        Cursor.visible = false;
+        //Cursor.visible = false;
         Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         GameCursor.transform.position = new Vector3(mousePos.x, mousePos.y, 0);
         CollectValuables();
@@ -68,18 +69,17 @@ public class GameController : MonoBehaviour
         if(Input.GetMouseButtonUp(0)) {
             TouchDown = false;
             UiArrow.SetActive(false);
-            Instantiate(Primary, new Vector3(SecondPosition.x, SecondPosition.y, 0), UiArrow.transform.rotation);
-            SecondPosition = FirstPosition;
+            CreateArrows();
             lineRenderer.enabled = false;
         }
 
-            Vector3[] points = new Vector3[2];
-            points[0] = new Vector3(FirstPosition.x, FirstPosition.y, 0);
-            points[1] = new Vector3(SecondPosition.x, SecondPosition.y, 0);
-            lineRenderer.SetPositions(points);
-            lineRenderer.numCornerVertices = 15;
-            lineRenderer.numCapVertices = 15;
-        
+        Vector3[] points = new Vector3[2];
+        points[0] = new Vector3(FirstPosition.x, FirstPosition.y, 0);
+        points[1] = new Vector3(SecondPosition.x, SecondPosition.y, 0);
+        lineRenderer.SetPositions(points);
+        lineRenderer.numCornerVertices = 15;
+        lineRenderer.numCapVertices = 15;
+        transform.position = Vector3.Lerp(transform.position, nextCamPosition, Time.deltaTime);
     }
 
     private void CollectValuables() {
@@ -98,8 +98,41 @@ public class GameController : MonoBehaviour
         }
     }
 
+    public void CreateArrows()
+    {
+        soundSource.BowRelease.Play();
+        List<GameObject> arrows = new List<GameObject>();
+
+        arrows.Add(Instantiate(Primary, new Vector3(SecondPosition.x, SecondPosition.y, 0), UiArrow.transform.rotation));
+        arrows.Add(Instantiate(Primary, new Vector3(SecondPosition.x, SecondPosition.y, 0), UiArrow.transform.rotation));
+        arrows.Add(Instantiate(Primary, new Vector3(SecondPosition.x, SecondPosition.y, 0), UiArrow.transform.rotation));
+
+        //Disable all collisions between each of the shot arrows.
+        for(int i = 0; i < arrows.Count; i++)
+        {
+            for(int k = 0;k < arrows.Count;k++)
+            {
+                Physics2D.IgnoreCollision(arrows[i].GetComponent<Collider2D>(), arrows[k].GetComponent<Collider2D>());
+            }
+        }
+
+        //Rotate the outside arrows.
+        arrows[1].transform.Rotate(new Vector3(0, 0, UiArrow.transform.rotation.z + 10f));
+        arrows[2].transform.Rotate(new Vector3(0, 0, UiArrow.transform.rotation.z - 10f));
+    }
+
     public void RemoveGold(int amt) {
         goldAmount -= amt;
         goldText.text = Util.IntToSixString(goldAmount);
+    }
+
+    public void MoveCameraUp()
+    {
+        nextCamPosition = new Vector3(transform.position.x, transform.position.y + 10, transform.position.z);
+    }
+
+    public void MoveCameraDown()
+    {
+        nextCamPosition = new Vector3(transform.position.x, transform.position.y - 10, transform.position.z);
     }
 }
