@@ -1,0 +1,36 @@
+﻿<Properties StartupConfiguration="{CF5C35D8-E58D-52BF-133D-5AE619CDB196}|">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Arrow.cs">
+    <Files>
+      <File FileName="Assets/Scripts/Arrow.cs" Line="51" Column="10" />
+      <File FileName="Assets/Scripts/GameController.cs" Line="83" Column="1" />
+      <File FileName="Assets/Scripts/Tree.cs" Line="14" Column="6" />
+      <File FileName="Assets/Scripts/Target.cs" Line="23" Column="54" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="pocket-warrior" expanded="True">
+            <Node name="Assets" expanded="True">
+              <Node name="Samples" expanded="True" />
+              <Node name="Scripts" expanded="True">
+                <Node name="Arrow.cs" selected="True" />
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+      <Pad Id="MonoDevelop.UnitTesting.TestPad">
+        <State name="__root__">
+          <Node name="pocket-warrior" expanded="True" selected="True" />
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="4897d882-9bea-4f6e-ad09-bcb769fe7bed" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>

@@ -16,7 +16,8 @@ public class GameController : MonoBehaviour
     public List<GameObject> Rooms;
 
     [Header("Weapons")]
-    public GameObject Primary;
+    public List<GameObject> Arrows;
+    public float ArrowSpread;
 
     private Text goldText;
     private Sound soundSource;
@@ -26,15 +27,14 @@ public class GameController : MonoBehaviour
     private Vector3 SecondPosition;
     private GameObject UiArrow;
     private Vector3 nextCamPosition;
+    private float shotPower = 0;
 
     private void Start()
     {
-        goldText = GameObject.Find("PlayerGold").GetComponent<Text>();
         UiArrow = GameObject.Find("UiArrow");
         UiArrow.SetActive(false);
         soundSource = GameObject.Find("SoundSource").GetComponent<Sound>();
         lineRenderer = GetComponent<LineRenderer>();
-        goldText.text = Util.IntToSixString(goldAmount);
         nextCamPosition = transform.position;
     }
 
@@ -63,16 +63,35 @@ public class GameController : MonoBehaviour
             UiArrow.transform.position = new Vector3(mousePos.x, mousePos.y, 0);
             Vector3 _direction = FirstPosition - UiArrow.transform.position;
             float _angle = Mathf.Atan2(_direction.y, _direction.x) * Mathf.Rad2Deg;
+            shotPower = Vector2.Distance(FirstPosition, UiArrow.transform.position);
             UiArrow.transform.rotation = Quaternion.AngleAxis(_angle - 90f, Vector3.forward);
+
+            if(shotPower >= 2)
+            {
+                lineRenderer.startColor = new Color32(255, 0, 0, 65);
+                lineRenderer.endColor = new Color32(255, 0, 0, 65); ;
+            } else
+            {
+                lineRenderer.startColor = new Color32(255, 255, 255, 65);
+                lineRenderer.endColor = new Color32(255, 255, 255, 65);
+            }
         }
 
         if(Input.GetMouseButtonUp(0)) {
             TouchDown = false;
             UiArrow.SetActive(false);
-            CreateArrows();
+
+            if(shotPower >= 2)
+            {
+                CreateArrows();
+            }
+
             lineRenderer.enabled = false;
+            lineRenderer.startColor = new Color32(255, 255, 255, 65);
+            lineRenderer.endColor = new Color32(255, 255, 255, 65);
         }
 
+        //Draw the dragged line
         Vector3[] points = new Vector3[2];
         points[0] = new Vector3(FirstPosition.x, FirstPosition.y, 0);
         points[1] = new Vector3(SecondPosition.x, SecondPosition.y, 0);
@@ -103,9 +122,9 @@ public class GameController : MonoBehaviour
         soundSource.BowRelease.Play();
         List<GameObject> arrows = new List<GameObject>();
 
-        arrows.Add(Instantiate(Primary, new Vector3(SecondPosition.x, SecondPosition.y, 0), UiArrow.transform.rotation));
-        arrows.Add(Instantiate(Primary, new Vector3(SecondPosition.x, SecondPosition.y, 0), UiArrow.transform.rotation));
-        arrows.Add(Instantiate(Primary, new Vector3(SecondPosition.x, SecondPosition.y, 0), UiArrow.transform.rotation));
+        arrows.Add(Instantiate(Arrows[Random.Range(0,Arrows.Count)], new Vector3(SecondPosition.x, SecondPosition.y, 0), UiArrow.transform.rotation));
+        arrows.Add(Instantiate(Arrows[Random.Range(0, Arrows.Count)], new Vector3(SecondPosition.x, SecondPosition.y, 0), UiArrow.transform.rotation));
+        arrows.Add(Instantiate(Arrows[Random.Range(0, Arrows.Count)], new Vector3(SecondPosition.x, SecondPosition.y, 0), UiArrow.transform.rotation));
 
         //Disable all collisions between each of the shot arrows.
         for(int i = 0; i < arrows.Count; i++)
@@ -117,8 +136,8 @@ public class GameController : MonoBehaviour
         }
 
         //Rotate the outside arrows.
-        arrows[1].transform.Rotate(new Vector3(0, 0, UiArrow.transform.rotation.z + 10f));
-        arrows[2].transform.Rotate(new Vector3(0, 0, UiArrow.transform.rotation.z - 10f));
+        arrows[1].transform.Rotate(new Vector3(0, 0, UiArrow.transform.rotation.z + ArrowSpread));
+        arrows[2].transform.Rotate(new Vector3(0, 0, UiArrow.transform.rotation.z - ArrowSpread));
     }
 
     public void RemoveGold(int amt) {
