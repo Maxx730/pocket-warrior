@@ -6,6 +6,7 @@ public class Sound : MonoBehaviour
 {
     public AudioSource CollectCoin;
     public AudioSource BowRelease;
+    public AudioSource ArrowImpact;
 
     private void Start()
     {
@@ -13,5 +14,6 @@ public class Sound : MonoBehaviour
 
         CollectCoin = sources[0];
         BowRelease = sources[1];
+        ArrowImpact = sources[2];
     }
 }

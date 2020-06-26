@@ -11,23 +11,26 @@ public class GameController : MonoBehaviour
     public GameObject GameCursor;
     public float AttractionRadius;
     public int goldAmount;
+    public float cameraReturnTime;
 
-    [Header("Dungeon Rooms")]
-    public List<GameObject> Rooms;
+    [Header("UI")]
+    public Text ArrowCount;
 
     [Header("Weapons")]
     public List<GameObject> Arrows;
     public float ArrowSpread;
+    public int ArrowAmount;
 
     private Text goldText;
     private Sound soundSource;
     private LineRenderer lineRenderer;
-    private bool TouchDown = false;
     private Vector3 FirstPosition;
     private Vector3 SecondPosition;
     private GameObject UiArrow;
-    private Vector3 nextCamPosition;
-    private float shotPower = 0;
+    public float shotPower = 0;
+    private Vector3 startingPosition;
+    private bool backToStart = false;
+    private Text ShotPowerText;
 
     private void Start()
     {
@@ -35,7 +38,8 @@ public class GameController : MonoBehaviour
         UiArrow.SetActive(false);
         soundSource = GameObject.Find("SoundSource").GetComponent<Sound>();
         lineRenderer = GetComponent<LineRenderer>();
-        nextCamPosition = transform.position;
+        ArrowCount.text = ArrowAmount.ToString();
+        ShotPowerText = GameObject.Find("ShotPower").GetComponent<Text>();
     }
 
     private void OnDrawGizmos()
@@ -46,51 +50,58 @@ public class GameController : MonoBehaviour
 
     private void Update()
     {
-        //Cursor.visible = false;
-        Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        GameCursor.transform.position = new Vector3(mousePos.x, mousePos.y, 0);
-        CollectValuables();
 
-        if(Input.GetMouseButtonDown(0)) {
-            lineRenderer.enabled = true;
-            FirstPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            TouchDown = true;
-            UiArrow.SetActive(true);
-        }
-
-        if(Input.GetMouseButton(0)) {
-            SecondPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            UiArrow.transform.position = new Vector3(mousePos.x, mousePos.y, 0);
-            Vector3 _direction = FirstPosition - UiArrow.transform.position;
-            float _angle = Mathf.Atan2(_direction.y, _direction.x) * Mathf.Rad2Deg;
-            shotPower = Vector2.Distance(FirstPosition, UiArrow.transform.position);
-            UiArrow.transform.rotation = Quaternion.AngleAxis(_angle - 90f, Vector3.forward);
-
-            if(shotPower >= 2)
+        //Only do arrow logic if there are arrows left to fire.
+        if(ArrowAmount >  0)
+        {
+            if (Input.GetMouseButtonDown(0))
             {
-                lineRenderer.startColor = new Color32(255, 0, 0, 65);
-                lineRenderer.endColor = new Color32(255, 0, 0, 65); ;
-            } else
-            {
-                lineRenderer.startColor = new Color32(255, 255, 255, 65);
-                lineRenderer.endColor = new Color32(255, 255, 255, 65);
+                lineRenderer.enabled = true;
+                FirstPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+                UiArrow.SetActive(true);
             }
-        }
 
-        if(Input.GetMouseButtonUp(0)) {
-            TouchDown = false;
-            UiArrow.SetActive(false);
-
-            if(shotPower >= 2)
+            if (Input.GetMouseButton(0))
             {
+                SecondPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+                UiArrow.transform.position = new Vector3(SecondPosition.x, SecondPosition.y, 0);
+                Vector3 _direction = FirstPosition - UiArrow.transform.position;
+                float _angle = Mathf.Atan2(_direction.y, _direction.x) * Mathf.Rad2Deg;
+                shotPower = Vector2.Distance(FirstPosition, UiArrow.transform.position);
+                UiArrow.transform.rotation = Quaternion.AngleAxis(_angle - 90f, Vector3.forward);
+                ShotPowerText.text = shotPower.ToString();
+                SetLineColor(false);
+            }
+
+            if (Input.GetMouseButtonUp(0))
+            {
+                UiArrow.SetActive(false);
                 CreateArrows();
+                ArrowAmount--;
+                ArrowCount.text = ArrowAmount.ToString();
+                SetLineColor(false, false);
             }
 
-            lineRenderer.enabled = false;
+            DrawDrag();
+        }
+    }
+
+    private void SetLineColor(bool hasPower, bool touchUp = true)
+    {
+        if(hasPower)
+        {
+            lineRenderer.startColor = new Color32(255, 0, 0, 65);
+            lineRenderer.endColor = new Color32(255, 0, 0, 65); ;
+        } else
+        {
+            lineRenderer.enabled = touchUp;
             lineRenderer.startColor = new Color32(255, 255, 255, 65);
             lineRenderer.endColor = new Color32(255, 255, 255, 65);
         }
+    }
 
+    private void DrawDrag()
+    {
         //Draw the dragged line
         Vector3[] points = new Vector3[2];
         points[0] = new Vector3(FirstPosition.x, FirstPosition.y, 0);
@@ -98,7 +109,6 @@ public class GameController : MonoBehaviour
         lineRenderer.SetPositions(points);
         lineRenderer.numCornerVertices = 15;
         lineRenderer.numCapVertices = 15;
-        transform.position = Vector3.Lerp(transform.position, nextCamPosition, Time.deltaTime);
     }
 
     private void CollectValuables() {
@@ -123,8 +133,6 @@ public class GameController : MonoBehaviour
         List<GameObject> arrows = new List<GameObject>();
 
         arrows.Add(Instantiate(Arrows[Random.Range(0,Arrows.Count)], new Vector3(SecondPosition.x, SecondPosition.y, 0), UiArrow.transform.rotation));
-        arrows.Add(Instantiate(Arrows[Random.Range(0, Arrows.Count)], new Vector3(SecondPosition.x, SecondPosition.y, 0), UiArrow.transform.rotation));
-        arrows.Add(Instantiate(Arrows[Random.Range(0, Arrows.Count)], new Vector3(SecondPosition.x, SecondPosition.y, 0), UiArrow.transform.rotation));
 
         //Disable all collisions between each of the shot arrows.
         for(int i = 0; i < arrows.Count; i++)
@@ -134,10 +142,6 @@ public class GameController : MonoBehaviour
                 Physics2D.IgnoreCollision(arrows[i].GetComponent<Collider2D>(), arrows[k].GetComponent<Collider2D>());
             }
         }
-
-        //Rotate the outside arrows.
-        arrows[1].transform.Rotate(new Vector3(0, 0, UiArrow.transform.rotation.z + ArrowSpread));
-        arrows[2].transform.Rotate(new Vector3(0, 0, UiArrow.transform.rotation.z - ArrowSpread));
     }
 
     public void RemoveGold(int amt) {
@@ -145,13 +149,14 @@ public class GameController : MonoBehaviour
         goldText.text = Util.IntToSixString(goldAmount);
     }
 
-    public void MoveCameraUp()
+    public void SetBackToStart(bool value)
     {
-        nextCamPosition = new Vector3(transform.position.x, transform.position.y + 10, transform.position.z);
+        backToStart = value;
     }
 
-    public void MoveCameraDown()
+    public void AddArrow(int prize)
     {
-        nextCamPosition = new Vector3(transform.position.x, transform.position.y - 10, transform.position.z);
+        ArrowAmount += prize;
+        ArrowCount.text = ArrowAmount.ToString();
     }
 }

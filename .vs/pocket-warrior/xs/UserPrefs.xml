@@ -1,10 +1,13 @@
 ﻿<Properties StartupConfiguration="{CF5C35D8-E58D-52BF-133D-5AE619CDB196}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Arrow.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/TargetGroup.cs">
     <Files>
-      <File FileName="Assets/Scripts/Arrow.cs" Line="51" Column="10" />
-      <File FileName="Assets/Scripts/GameController.cs" Line="83" Column="1" />
+      <File FileName="Assets/Scripts/Arrow.cs" Line="43" Column="134" />
+      <File FileName="Assets/Scripts/GameController.cs" Line="152" Column="6" />
       <File FileName="Assets/Scripts/Tree.cs" Line="14" Column="6" />
       <File FileName="Assets/Scripts/Target.cs" Line="23" Column="54" />
+      <File FileName="Assets/Scripts/Wind.cs" Line="21" Column="93" />
+      <File FileName="Assets/Scripts/Sound.cs" Line="17" Column="34" />
+      <File FileName="Assets/Scripts/TargetGroup.cs" Line="9" Column="12" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -13,7 +16,7 @@
             <Node name="Assets" expanded="True">
               <Node name="Samples" expanded="True" />
               <Node name="Scripts" expanded="True">
-                <Node name="Arrow.cs" selected="True" />
+                <Node name="TargetGroup.cs" selected="True" />
               </Node>
             </Node>
           </Node>
